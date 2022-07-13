@@ -1,0 +1,10 @@
+.home{
+    display: flex;
+    background-color: #F2F2F2;
+    .menu-component{
+        flex: 4;
+    }
+    .cart-component{
+        flex: 1;
+    }
+}

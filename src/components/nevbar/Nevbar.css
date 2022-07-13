@@ -1,0 +1,101 @@
+.nevbar {
+  background-color: #0066A7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+}
+
+.nevbar .left-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nevbar .left-side #bar-icon {
+  font-size: 30px;
+  margin-right: 25px;
+}
+
+.nevbar .left-side #bar-icon:hover {
+  cursor: pointer;
+}
+
+.nevbar .left-side #logo {
+  width: 30px;
+}
+
+.nevbar .left-side #logo-text {
+  margin: 0 10px;
+  font-size: 25px;
+}
+
+.nevbar .right-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nevbar .right-side .choose-option {
+  margin-right: 40px;
+}
+
+.nevbar .right-side .choose-option label {
+  margin-right: 15px;
+}
+
+.nevbar .right-side .user-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nevbar .right-side .user-profile #user-logo {
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.nevbar .right-side .user-profile .login {
+  text-align: left;
+}
+
+.nevbar .right-side .user-profile .login p {
+  margin: 0;
+  padding: 0;
+}
+
+.nevbar .right-side .user-profile .login p:hover {
+  cursor: pointer;
+}
+
+.nevbar .right-side .user-profile .login #account {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.nevbar .right-side .user-profile .login #login-signup {
+  font-size: 12px;
+  color: #bebebe;
+}
+
+@media screen and (max-width: 760px) {
+  .nevbar .right-side {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Nevbar.css.map */

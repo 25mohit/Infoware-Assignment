@@ -1,0 +1,70 @@
+.nevbar{
+    background-color: #0066A7;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    color: white;
+    .left-side{
+        display: flex;
+        align-items: center;
+        #bar-icon{
+            font-size: 30px;
+            margin-right: 25px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        #logo{
+            width: 30px;
+        }
+        #logo-text{
+            margin: 0 10px;
+            font-size: 25px;
+        }
+    }
+    .right-side{
+        display: flex;
+        align-items: center;
+        .choose-option{
+            margin-right: 40px;
+            label{
+                margin-right: 15px;
+            }
+        }
+        .user-profile{
+            display: flex;
+            align-items: center;
+            #user-logo{
+                margin-right: 15px;
+                font-size: 25px;
+            }
+            .login{
+                text-align: left;
+                p{
+                    margin: 0;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    padding: 0;
+                }
+                #account{
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+                #login-signup{
+                    font-size: 12px;
+                    color: rgb(190, 190, 190);
+                }
+            }
+        }
+    }
+}
+@media screen and(max-width:760px) {
+    .nevbar{
+        // .left-side{}
+        .right-side{
+            display: none;
+        }
+    }
+}
