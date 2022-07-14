@@ -1,0 +1,58 @@
+.favorite-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: white;
+    margin: 15px 0;
+    box-shadow: 1px 1px 5px 1px rgb(208, 207, 207);
+    padding:20px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    &:hover{
+        cursor: pointer;
+    }
+    .fav-left{
+        display: flex;
+        align-items: center;
+        #i-image{
+            width: 80px;
+        }
+        #i-name{
+            text-transform: capitalize;
+            margin: 0 10px;
+        }
+        #i-price{
+            color: #0066A7;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+    }
+    .fav-right{
+        display: flex;
+        align-items: center;
+        #delete-bt{
+            color: #0066A7;
+            font-size: 20px;
+            margin: 0 10px;
+            &:hover{
+                cursor: pointer;
+                color: red;
+                transition: 0.6s;
+            }
+        }
+        #add-bt{
+            background-color: rgb(15, 206, 15);
+            border: 2px solid rgb(15, 206, 15);
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            padding: 5px 15px;
+            &:hover{
+                cursor: pointer;
+                background-color: white;
+                color: rgb(15, 206, 15);
+                transition: 0.6s;
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux'
+import {AiOutlineHeart} from 'react-icons/ai'
 import './PizzaCard.css'
 
 export const PizzaCard = ({ data }) => {
@@ -11,11 +12,17 @@ export const PizzaCard = ({ data }) => {
         })
         console.log('Added .. !!!');
     }
-
+    const addToFavourite = () => {
+        dispatch({
+            type:"ADD_TO_FOVOURITES",
+            payload: data
+        })
+    }
     return(
         <div className="pizza-card">
             <div className="top-section">
                     <img src={ data.pImage } id='pizza-image' alt="" />
+                    <AiOutlineHeart id='heart-icon' onClick={ addToFavourite }/>
             </div>
             <div className="bottom-section">
                     <p id="pizza-name">{ data.pName }</p>

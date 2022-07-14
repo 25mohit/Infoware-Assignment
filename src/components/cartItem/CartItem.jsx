@@ -1,8 +1,10 @@
 import './CartItem.css'
 import { useDispatch } from 'react-redux'
 import { BsTrash } from 'react-icons/bs'
+import { MdOutlineAdd } from 'react-icons/md'
+import { AiOutlineMinus } from 'react-icons/ai'
 
-export const CartItem = ({ data }) => {
+export const CartItem = ({ data, setChangeQuantity, qty }) => {
     const dispatch = useDispatch()
 
     const removeItemFromCart = (id) => {
@@ -11,6 +13,7 @@ export const CartItem = ({ data }) => {
             payload:id
         })
     }
+
     return(
         <div className="cart-item">
             <div className="item-top">
@@ -24,8 +27,12 @@ export const CartItem = ({ data }) => {
             </div>
             <div className="item-bottom">
                 <div className="bottom-left">
-                    <BsTrash id='trash' onClick={() =>removeItemFromCart(data.id)}/>
-                    </div>
+                    { qty >1 ?
+                    <AiOutlineMinus id='minus-item' onClick={() => setChangeQuantity(() => qty-1)}/>:
+                    <BsTrash id='trash' onClick={() =>removeItemFromCart(data.id)}/>}
+                    <p className="item-qty">{qty}</p>
+                    <MdOutlineAdd id='add-item' onClick={() => setChangeQuantity(() => qty+1)}/>
+                </div>
                 <div className="bottom-right">
                     <p id="item-price"><span>₹</span>{ data.pPrize }</p>
                 </div>

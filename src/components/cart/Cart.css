@@ -41,11 +41,23 @@
   margin-bottom: 10px;
 }
 
+.cart .cart-footer .total-div #total-heading #empty-total-cart {
+  font-size: 17px;
+}
+
+.cart .cart-footer .total-div #total-heading #empty-total-cart:hover {
+  cursor: pointer;
+  color: red;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .cart .cart-footer .total-div #total-heading span {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  margin-right: 5px;
 }
 
 .cart .cart-footer #confirm-bt {

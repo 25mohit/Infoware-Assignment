@@ -1,0 +1,86 @@
+.favorite-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  margin: 15px 0;
+  -webkit-box-shadow: 1px 1px 5px 1px #d0cfcf;
+          box-shadow: 1px 1px 5px 1px #d0cfcf;
+  padding: 20px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.favorite-item:hover {
+  cursor: pointer;
+}
+
+.favorite-item .fav-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.favorite-item .fav-left #i-image {
+  width: 80px;
+}
+
+.favorite-item .fav-left #i-name {
+  text-transform: capitalize;
+  margin: 0 10px;
+}
+
+.favorite-item .fav-left #i-price {
+  color: #0066A7;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.favorite-item .fav-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.favorite-item .fav-right #delete-bt {
+  color: #0066A7;
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.favorite-item .fav-right #delete-bt:hover {
+  cursor: pointer;
+  color: red;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.favorite-item .fav-right #add-bt {
+  background-color: #0fce0f;
+  border: 2px solid #0fce0f;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+
+.favorite-item .fav-right #add-bt:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #0fce0f;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+/*# sourceMappingURL=FavoriteItem.css.map */

@@ -48,12 +48,31 @@
           align-items: center;
 }
 
-.nevbar .right-side .choose-option {
-  margin-right: 40px;
+.nevbar .right-side .favourate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
-.nevbar .right-side .choose-option label {
-  margin-right: 15px;
+.nevbar .right-side .favourate #fav-text {
+  font-weight: 500;
+}
+
+.nevbar .right-side .favourate #favourates-count {
+  position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  top: -10px;
+  right: -16px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background-color: red;
 }
 
 .nevbar .right-side .user-profile {

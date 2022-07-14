@@ -26,10 +26,23 @@
     .right-side{
         display: flex;
         align-items: center;
-        .choose-option{
-            margin-right: 40px;
-            label{
-                margin-right: 15px;
+        .favourate{
+            display: flex;
+            position: relative;
+            margin-right: 20px;
+            cursor: pointer;
+            #fav-text{
+                font-weight: 500;
+            }
+            #favourates-count{
+                position: absolute;
+                user-select: none;
+                top: -10px;
+                right: -16px;
+                font-weight: bold;
+                padding:2px 6px;
+                border-radius: 5px;
+                background-color: red;
             }
         }
         .user-profile{

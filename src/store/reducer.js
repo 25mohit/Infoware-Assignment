@@ -1,7 +1,8 @@
 import { createStore } from "redux"
 
 const initialState = {
-    cart: []
+    cart: [],
+    favourites:[]
 }
 
 const reducer = (state = initialState, action) => {
@@ -16,7 +17,27 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 cart: state.cart.filter(item => item.id !== action.payload )
             }
-            default :
+        case "EMPTY_CART":
+            return{
+                ...state,
+                cart:[]
+            }
+        case "ADD_TO_FOVOURITES":
+            return{
+                ...state,
+                favourites:[...state.favourites, action.payload]
+            }
+        case "REMOVE_FROM_FAVOURITE":
+            return{
+                ...state,
+                favourites: state.favourites.filter(item => item.id !== action.payload)
+            }
+        case "EMPTY_FAVOURITES":
+            return{
+                ...state,
+                favourites:[]
+            }
+            default:
             return state;
     }
 }
