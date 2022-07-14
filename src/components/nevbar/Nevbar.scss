@@ -75,9 +75,23 @@
 }
 @media screen and(max-width:760px) {
     .nevbar{
-        // .left-side{}
+        .left-side{
+            #bar-icon{
+                display: none;
+            }
+            #logo-text{
+                font-size: 20px;
+            }
+        }
         .right-side{
-            display: none;
+            .favourate{
+                #fav-text{
+                    // display: flex;
+                }
+            }
+            .user-profile{
+                display: none;
+            }
         }
     }
 }

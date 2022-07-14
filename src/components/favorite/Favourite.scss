@@ -18,6 +18,7 @@
             box-sizing: border-box;
             .fav-header{
                 display: flex;
+                align-items: center;
                 justify-content: space-between;
                 color: rgb(31, 31, 31);
                 #fav-heading{
@@ -53,4 +54,17 @@
                 }
             }
         }
+}
+@media screen and(max-width:650px) {
+    .favourite{
+            .favourite-container{
+                width: 97%;
+                height: 97%;
+                .fav-header{
+                    #fav-heading{
+                        font-size: 17px;
+                    }
+                }
+            }
+    }
 }

@@ -3,12 +3,9 @@ import { useDispatch } from 'react-redux'
 import { BsTrash } from 'react-icons/bs'
 import { MdOutlineAdd } from 'react-icons/md'
 import { AiOutlineMinus } from 'react-icons/ai'
-import { useEffect, useState } from 'react'
 
-export const CartItem = ({ data }) => {
+export const CartItem = ({ data, setquantity, quantity }) => {
 
-    const [pPrize, setPPrize] = useState(data.pPrize)
-    const [quantity, setquantity] = useState(1)
     const dispatch = useDispatch()
 
     const removeItemFromCart = (id) => {
@@ -18,21 +15,24 @@ export const CartItem = ({ data }) => {
         })
     }
 
-    useEffect(() => {
-        console.log('useEffect Runs');
-        console.log( pPrize);
-    },[])
-    
-    const updateProduct = (id) => {
-        setPPrize(() => 500)
+    const increaseItem = (id) => {
         setquantity(() => quantity+1)
         dispatch({
             type: "INCREASE_CART_ITEM",
             payload:{
-                id, pPrize
+                id
             }
         })
-        console.log(id, pPrize);
+    }
+
+    const decreaseItem = (id) => {
+        setquantity(() => quantity+1)
+        dispatch({
+            type: "DECREASE_CART_ITEM",
+            payload:{
+                id
+            }
+        })
     }
 
     return(
@@ -44,18 +44,19 @@ export const CartItem = ({ data }) => {
                 <div className="side-rgt">
                     <p id="item-name">{ data.pName }</p>
                     <p id="item-info">{ data.pDescription }</p>
+                    {data.pSize && <p id="item-size-info">{ data.pSize} | { data.pCrust }</p>}
                 </div>
             </div>
             <div className="item-bottom">
                 <div className="bottom-left">
-                    { quantity >1 ?
-                    <AiOutlineMinus id='minus-item' onClick={() => setquantity(() => quantity-1)}/>:
+                    { data.pQuantity >1 ?
+                    <AiOutlineMinus id='minus-item' onClick={() => decreaseItem(data.id)}/>:
                     <BsTrash id='trash' onClick={() =>removeItemFromCart(data.id)}/>}
-                    <p className="item-qty">{quantity}</p>
-                    <MdOutlineAdd id='add-item' onClick={() => updateProduct(data.id)}/>
+                    <p className="item-qty">{data.pQuantity}</p>
+                    <MdOutlineAdd id='add-item' onClick={() => increaseItem(data.id)}/>
                 </div>
                 <div className="bottom-right">
-                    <p id="item-price"><span>₹</span>{ data.pPrize }</p>
+                    <p id="item-price"><span>₹</span>{ data.pPrice }</p>
                 </div>
             </div>
         </div>

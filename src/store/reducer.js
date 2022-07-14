@@ -38,10 +38,27 @@ const reducer = (state = initialState, action) => {
             }
 
         case "INCREASE_CART_ITEM":
-          const findIndex = state.cart.findIndex( item => item.id == action.payload.id )
-          if(findIndex>=0){
-            state.cart[findIndex].pPrize= action.payload.pPrize
-          }
+            const findIndex = state.cart.findIndex( item => item.id == action.payload.id )
+            if(findIndex>=0){
+                console.log(state.cart[findIndex]);
+              state.cart[findIndex].pPrice += (state.cart[findIndex].pPrice /  state.cart[findIndex].pQuantity)
+              console.log(state.cart[findIndex]);
+              state.cart[findIndex].pQuantity += 1
+            }
+            return state;
+        case "DECREASE_CART_ITEM":
+            const findItemIndex = state.cart.findIndex( item => item.id == action.payload.id )
+            if(findItemIndex>=0){
+                if(state.cart[findItemIndex].pQuantity >=1){
+                    console.log(state.cart[findItemIndex]);
+                    state.cart[findItemIndex].pPrice -= (state.cart[findItemIndex].pPrice /  state.cart[findItemIndex].pQuantity)
+                    console.log(state.cart[findItemIndex]);
+                    state.cart[findItemIndex].pQuantity -= 1
+                }else if(state.cart[findItemIndex].pQuantity<1){
+
+                }
+            }
+            return state;
 
         case "EMPTY_FAVOURITES":
             return{

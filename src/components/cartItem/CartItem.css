@@ -34,6 +34,13 @@
   color: #307293;
 }
 
+.cart-item .item-top .side-rgt #item-size-info {
+  color: #307293;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
 .cart-item .item-bottom {
   margin-top: 10px;
   display: -webkit-box;

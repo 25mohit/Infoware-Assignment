@@ -15,81 +15,81 @@ export const pizzaData = [
         pImage: one,
         pName: "meal for 4: indo tandoori paneer & peppy panner combo",
         pDescription: "med indoi tandoori paneer + peppy paneer + 2 garlic bread + 2 pepsi",
-        pQuantity: "4",
-        pPrize:"1090"
+        pQuantity: 1,
+        pPrice:1090
     },
     {
         id:2,
         pImage: two,
         pName: "Meal for 4: chicken dominator combo",
         pDescription: "large chicken doinator + 2 gralic bread + 2 pepsi",
-        pQuantity: "4",
-        pPrize:"1051"
+        pQuantity: 1,
+        pPrice:1051
     },
     {
         id:3,
         pImage: three,
         pName: "corn n cheese paratha pizza",
         pDescription: "a crazzy fusion like never before, a delicious fusion of corn stuffed paratha and cheesy pizza.",
-        pQuantity: "4",
-        pSize:['Medium', 'Regular', 'Large'],
-        pCrust:['100% Wheat Thin Crust', 'Normal Wheat Thin Crust'],
-        pPrize:"179"
+        pQuantity: 1,
+        pSize:["Regular "],
+        pCrust:["100% Wheat Thin Crust"],
+        pPrice:179
     },
     {
         id:4,
         pImage: four,
         pName: "panner paratha pizza",
         pDescription: "med indoi tandoori paneer + peppy paneer + 2 garlic bread + 2 pepsi",
-        pQuantity: "4",
-        pPrize:"209"
+        pQuantity: 1,
+        pPrice:209
     },
     {
         id:5,
         pImage: five,
         pName: "chicken keema paratha pizza",
         pDescription: "med indoi tandoori paneer + peppy paneer + 2 garlic bread + 2 pepsi",
-        pQuantity: "4",
-        pPrize:"249"
+        pQuantity: 1,
+        pPrice:249
     },
     {
         id:6,
         pImage: six,
         pName: "value combo: 2 garlic breads",
         pDescription: "med indoi tandoori paneer + peppy paneer + 2 garlic bread + 2 pepsi",
-        pQuantity: "4",
-        pPrize:"198"
+        pQuantity: 1,
+        pPrice:198
     },
     {
         id:7,
         pImage: seven,
         pName: "value combo: 2 chodo lava cake",
         pDescription: "med indoi tandoori paneer + peppy paneer + 2 garlic bread + 2 pepsi",
-        pQuantity: "4",
-        pPrize:"198"
+        pQuantity: 1,
+        pPrice:198
     },
     {
         id:8,
         pImage: eight,
         pName: "value combo: 1 garlic bread and 1 choco lava cake",
         pDescription: "med indoi tandoori paneer + peppy paneer + 2 garlic bread + 2 pepsi",
-        pQuantity: "4",
-        pPrize:"198"
+        pQuantity: 1,
+        pPrice:198
     },
     {
         id:9,
         pImage: nine,
         pName: "value combo: 1 regular margherita and 1 choco lava cake",
         pDescription: "med indoi tandoori paneer + peppy paneer + 2 garlic bread + 2 pepsi",
-        pQuantity: "4",
-        pPrize:"1090"
+        pQuantity: 1,
+        pPrice:1090
     },
     {
         id:10,
         pImage: ten,
         pName: "meal for 4: indo tandoori paneer & peppy panner combo",
         pDescription: "med indoi tandoori paneer + peppy paneer + 2 garlic bread + 2 pepsi",
-        pQuantity: "4",
-        pPrize:"198"
+        pQuantity: 1,
+        pPrice:198
     },
 ]

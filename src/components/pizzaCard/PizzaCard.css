@@ -35,41 +35,90 @@
   font-size: 30px;
 }
 
-.pizza-card .bottom-section {
+.pizza-card .top-section #item-price {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.pizza-card .mid-section {
   padding: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: left;
 }
 
-.pizza-card .bottom-section #pizza-name {
+.pizza-card .mid-section #pizza-name {
   text-transform: capitalize;
   font-weight: 500;
 }
 
-.pizza-card .bottom-section #pizza-detail {
+.pizza-card .mid-section #pizza-detail {
   color: gray;
   text-transform: capitalize;
+  margin-bottom: 10px;
 }
 
-.pizza-card .bottom-section .card-footer {
+.pizza-card .mid-section .option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top: 1px solid #d7d7d7;
+}
+
+.pizza-card .mid-section .option #option-heading {
+  color: gray;
+  font-size: 14px;
+}
+
+.pizza-card .mid-section .option select {
+  border: none;
+}
+
+.pizza-card .mid-section .card-footer {
   text-align: right;
 }
 
-.pizza-card .bottom-section .card-footer #add {
-  border: 2px solid #0fce0f;
-  color: #0fce0f;
-  background-color: white;
+.pizza-card .mid-section .card-footer button {
   font-size: 13px;
   font-weight: bold;
   padding: 10px;
   border-radius: 5px;
 }
 
-.pizza-card .bottom-section .card-footer #add:hover {
+.pizza-card .mid-section .card-footer #add {
+  border: 2px solid #0fce0f;
+  color: #0fce0f;
+  background-color: white;
+}
+
+.pizza-card .mid-section .card-footer #add:hover {
   cursor: pointer;
   color: white;
   background-color: #0fce0f;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.pizza-card .mid-section .card-footer #remove {
+  background-color: red;
+  border: 2px solid red;
+  color: white;
+}
+
+.pizza-card .mid-section .card-footer #remove:hover {
+  cursor: pointer;
+  background-color: white;
+  color: red;
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }

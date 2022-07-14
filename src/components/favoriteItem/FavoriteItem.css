@@ -67,20 +67,45 @@
   transition: 0.6s;
 }
 
-.favorite-item .fav-right #add-bt {
-  background-color: #0fce0f;
-  border: 2px solid #0fce0f;
+.favorite-item .fav-right button {
   color: white;
   font-weight: bold;
   border-radius: 10px;
   padding: 5px 15px;
 }
 
-.favorite-item .fav-right #add-bt:hover {
+.favorite-item .fav-right button:hover {
   cursor: pointer;
-  background-color: white;
-  color: #0fce0f;
   -webkit-transition: 0.6s;
   transition: 0.6s;
+}
+
+.favorite-item .fav-right #add-bt {
+  background-color: #0fce0f;
+  border: 2px solid #0fce0f;
+}
+
+.favorite-item .fav-right #add-bt:hover {
+  background-color: white;
+  color: #0fce0f;
+}
+
+.favorite-item .fav-right #remove-bt {
+  background-color: red;
+  border: 2px solid red;
+}
+
+.favorite-item .fav-right #remove-bt:hover {
+  background-color: white;
+  color: red;
+}
+
+@media screen and (max-width: 650px) {
+  .favorite-item {
+    padding: 10px 5px;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
 }
 /*# sourceMappingURL=FavoriteItem.css.map */

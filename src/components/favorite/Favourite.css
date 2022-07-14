@@ -31,6 +31,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -78,5 +81,15 @@
 
 .favourite .empty-fav #empty-fav-text span {
   color: #0066A7;
+}
+
+@media screen and (max-width: 650px) {
+  .favourite .favourite-container {
+    width: 97%;
+    height: 97%;
+  }
+  .favourite .favourite-container .fav-header #fav-heading {
+    font-size: 17px;
+  }
 }
 /*# sourceMappingURL=Favourite.css.map */

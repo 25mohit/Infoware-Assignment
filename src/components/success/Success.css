@@ -1,0 +1,79 @@
+.success {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.success .container-success {
+  background-color: #0066A7;
+  width: 450px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.success .container-success .header-success {
+  position: relative;
+  width: 100%;
+}
+
+.success .container-success .header-success #close-modal {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-size: 23px;
+  padding: 5px;
+  background-color: #0066A7;
+  border-radius: 50%;
+  color: white;
+}
+
+.success .container-success .header-success #close-modal:hover {
+  cursor: pointer;
+}
+
+.success .container-success .message {
+  padding: 0 45px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.success .container-success .message #message-text {
+  color: white;
+}
+
+.success .container-success .message #message-text span {
+  font-size: 40px;
+}
+
+@media screen and (max-width: 530px) {
+  .success .container-success {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=Success.css.map */

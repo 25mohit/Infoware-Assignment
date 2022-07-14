@@ -113,7 +113,13 @@
 }
 
 @media screen and (max-width: 760px) {
-  .nevbar .right-side {
+  .nevbar .left-side #bar-icon {
+    display: none;
+  }
+  .nevbar .left-side #logo-text {
+    font-size: 20px;
+  }
+  .nevbar .right-side .user-profile {
     display: none;
   }
 }

@@ -40,19 +40,37 @@
                 transition: 0.6s;
             }
         }
-        #add-bt{
-            background-color: rgb(15, 206, 15);
-            border: 2px solid rgb(15, 206, 15);
+        button{
             color: white;
             font-weight: bold;
             border-radius: 10px;
             padding: 5px 15px;
             &:hover{
                 cursor: pointer;
-                background-color: white;
-                color: rgb(15, 206, 15);
                 transition: 0.6s;
             }
         }
+        #add-bt{
+            background-color: rgb(15, 206, 15);
+            border: 2px solid rgb(15, 206, 15);
+            &:hover{
+                background-color: white;
+                color: rgb(15, 206, 15);
+            }
+        }
+        #remove-bt{
+            background-color: red;
+            border: 2px solid red;
+            &:hover{
+                background-color: white;
+                color: red;
+            }
+        }
+    }
+}
+@media screen and(max-width:650px) {
+    .favorite-item{
+        padding: 10px 5px;
+        justify-content: right;
     }
 }

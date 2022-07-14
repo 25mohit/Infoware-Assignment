@@ -1,0 +1,56 @@
+.success{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.4);
+    .container-success{
+        background-color: #0066A7;
+        width: 450px;
+        height: 300px;
+        border-radius: 20px;
+        .header-success{
+            position: relative;
+            width: 100%;
+            #close-modal{
+                position: absolute;
+                top: -15px;
+                right: -15px;
+                font-size: 23px;
+                padding: 5px;
+                background-color: #0066A7;
+                border-radius: 50%;
+                color: white;
+                &:hover{
+                    cursor: pointer;
+                }
+            }       
+        }
+        .message{
+            padding: 0 45px;
+            box-sizing: border-box;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            #message-text{
+                color: white;
+                span{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+@media screen and(max-width:530px) {
+        .success{
+            .container-success{
+                width: 90%;
+            }
+        }
+}
