@@ -12,31 +12,43 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 cart:[...state.cart, action.payload]
             }
+
         case "REMOVE_FROM_CART":
             return{
                 ...state,
                 cart: state.cart.filter(item => item.id !== action.payload )
             }
+            
         case "EMPTY_CART":
             return{
                 ...state,
                 cart:[]
             }
+
         case "ADD_TO_FOVOURITES":
             return{
                 ...state,
                 favourites:[...state.favourites, action.payload]
             }
+
         case "REMOVE_FROM_FAVOURITE":
             return{
                 ...state,
                 favourites: state.favourites.filter(item => item.id !== action.payload)
             }
+
+        case "INCREASE_CART_ITEM":
+          const findIndex = state.cart.findIndex( item => item.id == action.payload.id )
+          if(findIndex>=0){
+            state.cart[findIndex].pPrize= action.payload.pPrize
+          }
+
         case "EMPTY_FAVOURITES":
             return{
                 ...state,
                 favourites:[]
             }
+
             default:
             return state;
     }

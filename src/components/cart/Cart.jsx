@@ -3,15 +3,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import { CartItem } from '../cartItem/CartItem'
 import emptyCart from '../../assets/images/pizza/empty_cart.png'
 import { FaTrash } from 'react-icons/fa'
-import { useState } from 'react'
 
 export const Cart = () => {
-    const [changeQuantity, setChangeQuantity] = useState(1)
     
     const cart = useSelector(state => state.cart)
     const dispatch = useDispatch()
 
-    const totalPrice = cart.reduce((acc, current) =>acc+Number(current.pPrize),0)*changeQuantity
+    const totalPrice = cart.reduce((acc, current) =>acc+Number(current.pPrize),0)
     console.log(totalPrice);
 
     const emptyCompleteCart = () => {
@@ -19,7 +17,7 @@ export const Cart = () => {
             type:"EMPTY_CART"
         })
     } 
-    
+
     return(
         <div className="cart">
             {cart.length>0 ?
@@ -29,8 +27,6 @@ export const Cart = () => {
                             cart.map(item => <CartItem 
                                 key={ item.id } 
                                 data ={ item } 
-                                setChangeQuantity={ setChangeQuantity } 
-                                qty={ changeQuantity }
                                 />)
                         }
                 </div>
